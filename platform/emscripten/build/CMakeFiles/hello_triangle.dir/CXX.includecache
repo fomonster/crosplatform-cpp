@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Sergey/_Cpp/crossplatform/platform/emscripten/main.cpp
+C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/main.cpp
 cstdio
 -
 cassert
@@ -14,9 +14,9 @@ cassert
 GL/glut.h
 -
 ../../src/app.h
-C:/Sergey/_Cpp/crossplatform/src/app.h
+C:/Sergey/_Cpp/crossplatform-cpp/src/app.h
 
-C:/Sergey/_Cpp/crossplatform/src/app.cpp
+C:/Sergey/_Cpp/crossplatform-cpp/src/app.cpp
 GLES2/gl2.h
 -
 GLES2/gl2ext.h
@@ -28,5 +28,5 @@ stdlib.h
 math.h
 -
 
-C:/Sergey/_Cpp/crossplatform/src/app.h
+C:/Sergey/_Cpp/crossplatform-cpp/src/app.h
 

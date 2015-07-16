@@ -48,10 +48,10 @@ RM = c:/Dev/CMake/bin/cmake.exe -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Sergey/_Cpp/crossplatform/platform/emscripten
+CMAKE_SOURCE_DIR = C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Sergey/_Cpp/crossplatform/platform/emscripten/build
+CMAKE_BINARY_DIR = C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,32 @@ hello_triangle/fast:
 	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/build
 .PHONY : hello_triangle/fast
 
-C_/Sergey/_Cpp/crossplatform/src/app.o: C_/Sergey/_Cpp/crossplatform/src/app.cpp.o
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.o: C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
 
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.o
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.o
 
 # target to build an object file
-C_/Sergey/_Cpp/crossplatform/src/app.cpp.o:
-	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform/src/app.cpp.o
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.cpp.o
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
 
-C_/Sergey/_Cpp/crossplatform/src/app.i: C_/Sergey/_Cpp/crossplatform/src/app.cpp.i
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.i: C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.i
 
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.i
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.i
 
 # target to preprocess a source file
-C_/Sergey/_Cpp/crossplatform/src/app.cpp.i:
-	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform/src/app.cpp.i
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.cpp.i
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.i:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.i
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.i
 
-C_/Sergey/_Cpp/crossplatform/src/app.s: C_/Sergey/_Cpp/crossplatform/src/app.cpp.s
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.s: C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s
 
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.s
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.s
 
 # target to generate assembly for a file
-C_/Sergey/_Cpp/crossplatform/src/app.cpp.s:
-	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform/src/app.cpp.s
-.PHONY : C_/Sergey/_Cpp/crossplatform/src/app.cpp.s
+C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... hello_triangle"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... C_/Sergey/_Cpp/crossplatform/src/app.o"
-	@echo "... C_/Sergey/_Cpp/crossplatform/src/app.i"
-	@echo "... C_/Sergey/_Cpp/crossplatform/src/app.s"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.o"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.i"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

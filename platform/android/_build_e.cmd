@@ -1,4 +1,4 @@
 
-adb install -r bin/GL2JNIActivity-release-unsigned.apk
+adb install -r -s bin/GL2JNIActivity-release-unsigned.apk
 
 pause

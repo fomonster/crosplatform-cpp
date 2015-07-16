@@ -6,24 +6,29 @@
 #include <stdlib.h>
 #include <math.h>
 
-static int stageWidth = 100;
-static int stageHeight = 100;
+static int stageWidth = 400;
+static int stageHeight = 300;
 
 GLuint gProgram = 0;
 
 GLuint geom_id = 0;
 
 GLuint Position_loc = 0;
+GLuint Color_loc = 1;
 
 struct Vertex {
 	float x, y, z;
-	//unsigned char r, g, b, a;
+	float r, g, b, a;
 };
 
 const Vertex gTriangleVertices[] = {
-	{  0.f, .5f, 0.f }, //, 255, 0, 0, 255
-	{ -.5f, -.5f, 0.f }, //, 0, 255, 0, 255
-	{ .5f, -.5f, 0.f } //, 0, 0, 255, 255
+	{ -.5f, .5f, 0.f, 1.f, 0.f, 1.f, 1.f },
+	{ .5f, .5f, 0.f, 1.f, 0.f, 0.f, 1.f },
+	{ .5f, -.5f, 0.f, 0.f, 0.f, 1.f, 1.f },
+
+	{ -.5f, .5f, 0.f, 1.f, 0.f, 1.f, 1.f },
+	{ -.5f, -.5f, 0.f, 0.f, 1.f, 0.f, 1.f },
+	{ .5f, -.5f, 0.f, 0.f, 0.f, 1.f, 1.f }
 };
 
 // Инициализация
@@ -152,6 +157,7 @@ GLuint createProgram(const char* pVertexSource, const char* pFragmentSource) {
 		glLinkProgram(program);
 
 		glBindAttribLocation(gProgram, Position_loc, "vPosition");
+		glBindAttribLocation(gProgram, Color_loc, "vColor");
 
 		GLint linkStatus = GL_FALSE;
 		glGetProgramiv(program, GL_LINK_STATUS, &linkStatus);
@@ -192,12 +198,16 @@ bool setupGraphics(int w, int h)
 
 	//LOGI("setupGraphics(%d, %d)", w, h);
 	gProgram = createProgram("attribute vec4 vPosition;                     \n"
+							 "attribute vec4 vColor;                        \n"
+							 "varying vec4 v_color;                         \n"
 							 "void main() {                                 \n"
 							 "  gl_Position = vPosition;                    \n"
+							 "  v_color = vColor;                           \n"
 							 "}                                             \n",
 							 "precision mediump float;                      \n"
+							 "varying vec4 v_color;                         \n"
 							 "void main() {                                 \n"
-							 "  gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0);    \n"
+							 "  gl_FragColor = v_color;                     \n"
 							 "}                                             \n");
 	if (!gProgram) {
 		//LOGE("Could not create program.");
@@ -210,14 +220,20 @@ bool setupGraphics(int w, int h)
 	glBindBuffer(GL_ARRAY_BUFFER, geom_id);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(gTriangleVertices), gTriangleVertices, GL_STATIC_DRAW);
 
-	glVertexAttribPointer(Position_loc, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+	//auto offset = [](size_t value) -> const GLvoid *{ return reinterpret_cast<const GLvoid *>(value); };
+
+	Position_loc = glGetAttribLocation(gProgram, "vPosition");
+	Color_loc = glGetAttribLocation(gProgram, "vColor");
+
 	glEnableVertexAttribArray(Position_loc);
-	//gvPositionHandle = glGetAttribLocation(gProgram, "vPosition");
-	//checkGlError("glGetAttribLocation");
-	//LOGI("glGetAttribLocation(\"vPosition\") = %d\n", gvPositionHandle);
+	glEnableVertexAttribArray(Color_loc);
 
+	GLuint offset1 = 0;
+	glVertexAttribPointer(Position_loc, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
+	GLuint offset2 = 3 * sizeof(float);
+	glVertexAttribPointer(Color_loc, 4, GL_FLOAT, GL_TRUE, sizeof(Vertex), (GLvoid*)12);
+	
 
-	checkGlError("glViewport");
 	return true;
 }
 
@@ -240,9 +256,10 @@ void renderFrame()
 
 	glUseProgram(gProgram);
 	//checkGlError("glUseProgram");
-	glEnableVertexAttribArray(Position_loc);
+	//glEnableVertexAttribArray(Color_loc);
+	//glEnableVertexAttribArray(Position_loc);
 
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawArrays(GL_TRIANGLES, 0, 6);
 	
 }
 

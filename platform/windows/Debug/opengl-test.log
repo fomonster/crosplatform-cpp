@@ -1,10 +1,10 @@
-﻿Build started 16.07.2015 0:20:58.
-     1>Project "c:\Sergey\_Cpp\crossplatform\platform\windows\opengl-test.vcxproj" on node 2 (Build target(s)).
+﻿Build started 16.07.2015 12:11:21.
+     1>Project "c:\Sergey\_Cpp\crossplatform-cpp\platform\windows\opengl-test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Sergey\_Cpp\libs\gles\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\app.cpp
          app.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Sergey\_Cpp\crossplatform\platform\windows\Debug\..\..\..\bin\opengl-test.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Sergey\_Cpp\libs\gles\lib libGLESv2.lib libEGL.lib esUtil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Sergey\_Cpp\crossplatform\platform\windows\Debug\..\..\..\bin\opengl-test.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Sergey\_Cpp\crossplatform\platform\windows\Debug\..\..\..\bin\opengl-test.lib" /MACHINE:X86 Debug\app.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Sergey\_Cpp\libs\gles\lib libGLESv2.lib libEGL.lib esUtil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.lib" /MACHINE:X86 Debug\app.obj
          Debug\main.obj
          esUtil.lib(esUtil.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
      1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
@@ -12,12 +12,12 @@
      1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
-     1>esUtil.lib(esUtil.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil.obj)' or at 'C:\Sergey\_Cpp\crossplatform\bin\vc100.pdb'; linking object as if no debug info
-     1>esUtil.lib(esUtil_win32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil_win32.obj)' or at 'C:\Sergey\_Cpp\crossplatform\bin\vc100.pdb'; linking object as if no debug info
-     1>esUtil.lib(esUtil_TGA.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil_TGA.obj)' or at 'C:\Sergey\_Cpp\crossplatform\bin\vc100.pdb'; linking object as if no debug info
-         opengl-test.vcxproj -> C:\Sergey\_Cpp\crossplatform\platform\windows\Debug\..\..\..\bin\opengl-test.exe
-     1>Done Building Project "c:\Sergey\_Cpp\crossplatform\platform\windows\opengl-test.vcxproj" (Build target(s)).
+     1>esUtil.lib(esUtil.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil.obj)' or at 'C:\Sergey\_Cpp\crossplatform-cpp\bin\vc100.pdb'; linking object as if no debug info
+     1>esUtil.lib(esUtil_win32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil_win32.obj)' or at 'C:\Sergey\_Cpp\crossplatform-cpp\bin\vc100.pdb'; linking object as if no debug info
+     1>esUtil.lib(esUtil_TGA.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'esUtil.lib(esUtil_TGA.obj)' or at 'C:\Sergey\_Cpp\crossplatform-cpp\bin\vc100.pdb'; linking object as if no debug info
+         opengl-test.vcxproj -> C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.exe
+     1>Done Building Project "c:\Sergey\_Cpp\crossplatform-cpp\platform\windows\opengl-test.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.42
+Time Elapsed 00:00:02.07

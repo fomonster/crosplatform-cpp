@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Sergey/_Cpp/crossplatform/src/app.cpp" "C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform/src/app.cpp.o"
-  "C:/Sergey/_Cpp/crossplatform/platform/emscripten/main.cpp" "C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles/hello_triangle.dir/main.cpp.o"
+  "C:/Sergey/_Cpp/crossplatform-cpp/src/app.cpp" "C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o"
+  "C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/main.cpp" "C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles/hello_triangle.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

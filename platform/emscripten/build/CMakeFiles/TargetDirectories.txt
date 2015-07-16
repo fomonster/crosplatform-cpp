@@ -1,1 +1,1 @@
-C:/Sergey/_Cpp/crossplatform/platform/emscripten/build/CMakeFiles/hello_triangle.dir
+C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles/hello_triangle.dir
