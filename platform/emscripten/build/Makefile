@@ -150,6 +150,60 @@ C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s:
 	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s
 .PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.s
 
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.o: C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.o
+
+# target to build an object file
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.i: C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.i
+
+# target to preprocess a source file
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i
+
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.s: C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.s
+
+# target to generate assembly for a file
+C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s
+
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.o: C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.o
+
+# target to build an object file
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
+
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.i: C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.i
+
+# target to preprocess a source file
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i
+
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.s: C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s
+
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.s
+
+# target to generate assembly for a file
+C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s:
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s
+.PHONY : C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +243,12 @@ help:
 	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.o"
 	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.i"
 	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/app.s"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/images.o"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/images.i"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/images.s"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.o"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.i"
+	@echo "... C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

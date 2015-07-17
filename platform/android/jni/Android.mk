@@ -15,10 +15,10 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-
+APP_PLATFORM	:= android-19
 LOCAL_MODULE    := libgl2jni
 LOCAL_CFLAGS    := -Werror
-LOCAL_SRC_FILES := main.cpp ../../../src/app.cpp
+LOCAL_SRC_FILES := main.cpp ../../../src/app.cpp ../../../src/images.cpp ../../../src/lodepng.cpp
 LOCAL_C_INCLUDES := ../../src/
 LOCAL_LDLIBS    := -llog -lGLESv2
 

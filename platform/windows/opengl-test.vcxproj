@@ -12,10 +12,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\app.cpp" />
+    <ClCompile Include="..\..\src\images.cpp" />
+    <ClCompile Include="..\..\src\lodepng.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\app.h" />
+    <ClInclude Include="..\..\src\images.h" />
+    <ClInclude Include="..\..\src\lodepng.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A9CA9036-5AE5-48AD-9A9E-5585920AF60C}</ProjectGuid>

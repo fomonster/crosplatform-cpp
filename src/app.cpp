@@ -5,6 +5,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+//#include <iostream>
+//#include <fstream>
+#include <cstdlib>
+#include "images.h"
+#include "lodepng.h"
+
+using namespace std;
+
 
 static int stageWidth = 400;
 static int stageHeight = 300;
@@ -14,21 +22,29 @@ GLuint gProgram = 0;
 GLuint geom_id = 0;
 
 GLuint Position_loc = 0;
-GLuint Color_loc = 1;
+GLuint Texture_loc = 1;
+GLuint Color_loc = 2;
+
+GLuint textureId;
 
 struct Vertex {
 	float x, y, z;
+	float u, v;
 	float r, g, b, a;
 };
 
-const Vertex gTriangleVertices[] = {
-	{ -.5f, .5f, 0.f, 1.f, 0.f, 1.f, 1.f },
-	{ .5f, .5f, 0.f, 1.f, 0.f, 0.f, 1.f },
-	{ .5f, -.5f, 0.f, 0.f, 0.f, 1.f, 1.f },
 
-	{ -.5f, .5f, 0.f, 1.f, 0.f, 1.f, 1.f },
-	{ -.5f, -.5f, 0.f, 0.f, 1.f, 0.f, 1.f },
-	{ .5f, -.5f, 0.f, 0.f, 0.f, 1.f, 1.f }
+
+
+
+const Vertex gTriangleVertices[] = {
+	{ -.5f, .5f, 0.f, 0.0f, 1.0f, 1.f, 1.f, 1.0f, 1.f },
+	{ .5f, .5f, 0.f, 1.0f, 1.0f,  1.f, 1.f, 1.0f, 1.f },
+	{ .5f, -.5f, 0.f, 1.0f, 0.0f,  1.f, 1.f, 1.0f, 1.f },
+
+	{ -.5f, .5f, 0.f, 0.0f, 1.0f,  1.f, 1.f, 1.0f, 1.f },
+	{ -.5f, -.5f, 0.f, 0.0f, 0.0f,  1.f, 1.f, 1.0f, 1.f },
+	{ .5f, -.5f, 0.f, 1.0f, 0.0f,  1.f, 1.f, 1.0f, 1.f }
 };
 
 // Инициализация
@@ -183,9 +199,61 @@ GLuint createProgram(const char* pVertexSource, const char* pFragmentSource) {
 	return program;
 }
 
+/*
+void printFile()
+{
+	//Opens .txt file
+	ifstream fin;
+	string filename = "assets/xml/temp/Comics.xml";
+	fin.open(filename);
+
+
+	//Fail check
+	if (fin.fail())
+	{
+		cout << "File failed to open. " << filename.c_str() << endl;
+		return;
+	}
+	else
+	{
+		cout << "File opened!" << filename.c_str() << endl;
+	}
+	
+	char temp[1024];
+	
+	while ( !fin.eof() ) {
+		fin.getline(temp, 1024);
+		cout << temp << endl;
+	}
+
+	//Closes file
+	fin.close();
+}*/
+
+GLuint load_texture(const GLsizei width, const GLsizei height, const GLenum type, const GLvoid* pixels) {
+	GLuint texture_object_id;
+	glGenTextures(1, &texture_object_id);
+
+
+	glBindTexture(GL_TEXTURE_2D, texture_object_id);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexImage2D( GL_TEXTURE_2D, 0, type, width, height, 0, type, GL_UNSIGNED_BYTE, pixels);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+	return texture_object_id;
+}
+
 
 bool setupGraphics(int w, int h) 
 {
+	//
+    
+	//printFile();
+
+	//
 	glViewport(0, 0, w, h);
 
 	// Clear the color buffer
@@ -199,15 +267,20 @@ bool setupGraphics(int w, int h)
 	//LOGI("setupGraphics(%d, %d)", w, h);
 	gProgram = createProgram("attribute vec4 vPosition;                     \n"
 							 "attribute vec4 vColor;                        \n"
+							 "attribute vec4 vTexture;                      \n"
 							 "varying vec4 v_color;                         \n"
+							 "varying vec2 v_texCoord;                      \n"
 							 "void main() {                                 \n"
 							 "  gl_Position = vPosition;                    \n"
 							 "  v_color = vColor;                           \n"
+							 "  v_texCoord = vTexture.xy;                   \n"
 							 "}                                             \n",
 							 "precision mediump float;                      \n"
+							 "uniform sampler2D s_texture;                  \n"	
 							 "varying vec4 v_color;                         \n"
+							 "varying vec2 v_texCoord;                         \n"
 							 "void main() {                                 \n"
-							 "  gl_FragColor = v_color;                     \n"
+							 "  gl_FragColor = v_color * texture2D(s_texture, v_texCoord);  \n"
 							 "}                                             \n");
 	if (!gProgram) {
 		//LOGE("Could not create program.");
@@ -223,15 +296,43 @@ bool setupGraphics(int w, int h)
 	//auto offset = [](size_t value) -> const GLvoid *{ return reinterpret_cast<const GLvoid *>(value); };
 
 	Position_loc = glGetAttribLocation(gProgram, "vPosition");
+	Texture_loc = glGetAttribLocation(gProgram, "vTexture");
 	Color_loc = glGetAttribLocation(gProgram, "vColor");
 
 	glEnableVertexAttribArray(Position_loc);
+	glEnableVertexAttribArray(Texture_loc);
 	glEnableVertexAttribArray(Color_loc);
 
 	GLuint offset1 = 0;
 	glVertexAttribPointer(Position_loc, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
 	GLuint offset2 = 3 * sizeof(float);
-	glVertexAttribPointer(Color_loc, 4, GL_FLOAT, GL_TRUE, sizeof(Vertex), (GLvoid*)12);
+	glVertexAttribPointer(Texture_loc, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)12);
+	GLuint offset3 = 5 * sizeof(float);
+	glVertexAttribPointer(Color_loc, 4, GL_FLOAT, GL_TRUE, sizeof(Vertex), (GLvoid*)20);
+	
+	// texture
+
+	//FIBITMAP* bitmap = FreeImage_Load(FreeImage_GetFileType("textures/test/nehe_06.png", 0), "textures/test/nehe_06.png");
+	
+	glEnable(GL_TEXTURE_2D);
+
+
+	//lodepng_load_file("");
+	std::vector<unsigned char> image;
+	unsigned width, height;
+	lodepng::decode(image, width, height, "/sdcard/assets/crate.png");
+	//width = 256;
+	//height = 256;
+
+	//GLuint* pixels = (GLuint*)&image[0];// decode_image(width, height));//
+	//textureId = load_texture(width, height, GL_RGBA, decode_image(width, height));
+
+	textureId = load_texture(width, height, GL_RGBA, &image[0]);
+	//free(image);
+
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, textureId);
 	
 
 	return true;

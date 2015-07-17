@@ -5,6 +5,12 @@
     <ClCompile Include="..\..\src\app.cpp">
       <Filter>game</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\images.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\lodepng.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="game">
@@ -13,6 +19,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\app.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\images.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\lodepng.h">
       <Filter>game</Filter>
     </ClInclude>
   </ItemGroup>

@@ -105,20 +105,72 @@ CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o.pro
 CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o.provides.build: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
 
 
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o: CMakeFiles/hello_triangle.dir/flags.make
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o: C:/Sergey/_Cpp/crossplatform-cpp/src/images.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o -c C:/Sergey/_Cpp/crossplatform-cpp/src/images.cpp
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"  $(CXX_DEFINES) $(CXX_FLAGS) -E C:/Sergey/_Cpp/crossplatform-cpp/src/images.cpp > CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.i
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"  $(CXX_DEFINES) $(CXX_FLAGS) -S C:/Sergey/_Cpp/crossplatform-cpp/src/images.cpp -o CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.s
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.requires
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.provides: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.provides.build
+.PHONY : CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.provides
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.provides.build: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o: CMakeFiles/hello_triangle.dir/flags.make
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o: C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o -c C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"  $(CXX_DEFINES) $(CXX_FLAGS) -E C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp > CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.i
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"  $(CXX_DEFINES) $(CXX_FLAGS) -S C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp -o CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.s
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.requires:
+
+.PHONY : CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.requires
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.provides: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello_triangle.dir/build.make CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.provides.build
+.PHONY : CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.provides
+
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.provides.build: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
+
+
 # Object files for target hello_triangle
 hello_triangle_OBJECTS = \
 "CMakeFiles/hello_triangle.dir/main.cpp.o" \
-"CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o"
+"CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o" \
+"CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o" \
+"CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o"
 
 # External object files for target hello_triangle
 hello_triangle_EXTERNAL_OBJECTS =
 
 hello_triangle.js: CMakeFiles/hello_triangle.dir/main.cpp.o
 hello_triangle.js: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
+hello_triangle.js: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+hello_triangle.js: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
 hello_triangle.js: CMakeFiles/hello_triangle.dir/build.make
 hello_triangle.js: CMakeFiles/hello_triangle.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable hello_triangle.js"
-	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"   -DNDEBUG -O2  -O2 @CMakeFiles/hello_triangle.dir/objects1.rsp  -o hello_triangle.js  
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hello_triangle.js"
+	"c:/Program Files/Emscripten/emscripten/1.34.1/em++.bat"   --embed-file assets -DNDEBUG -O2  -O2 @CMakeFiles/hello_triangle.dir/objects1.rsp  -o hello_triangle.js  
 
 # Rule to build all files generated by this target.
 CMakeFiles/hello_triangle.dir/build: hello_triangle.js
@@ -127,6 +179,8 @@ CMakeFiles/hello_triangle.dir/build: hello_triangle.js
 
 CMakeFiles/hello_triangle.dir/requires: CMakeFiles/hello_triangle.dir/main.cpp.o.requires
 CMakeFiles/hello_triangle.dir/requires: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o.requires
+CMakeFiles/hello_triangle.dir/requires: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o.requires
+CMakeFiles/hello_triangle.dir/requires: CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o.requires
 
 .PHONY : CMakeFiles/hello_triangle.dir/requires
 

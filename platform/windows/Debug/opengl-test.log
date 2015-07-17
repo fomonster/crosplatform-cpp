@@ -1,10 +1,12 @@
-﻿Build started 16.07.2015 12:11:21.
+﻿Build started 17.07.2015 9:36:32.
      1>Project "c:\Sergey\_Cpp\crossplatform-cpp\platform\windows\opengl-test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Sergey\_Cpp\libs\gles\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\app.cpp
          app.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Sergey\_Cpp\libs\gles\lib libGLESv2.lib libEGL.lib esUtil.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Sergey\_Cpp\crossplatform-cpp\platform\windows\Debug\..\..\..\bin\opengl-test.lib" /MACHINE:X86 Debug\app.obj
+         Debug\images.obj
+         Debug\lodepng.obj
          Debug\main.obj
          esUtil.lib(esUtil.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
      1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
@@ -20,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.07
+Time Elapsed 00:00:01.06

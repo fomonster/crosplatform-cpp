@@ -1,0 +1,42 @@
+if (${BUILD_PLATFORM} STREQUAL "EMSCRIPTEN")
+
+ set ( USED_FRAMEWORKS z zip )
+
+ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/res DESTINATION ${CMAKE_BINARY_DIR})
+ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/targets/Emscripten/res DESTINATION ${CMAKE_BINARY_DIR})
+
+ foreach(DIR ${SOURCE_DIRS})
+  include_directories(${SRC_DIR}/${DIR})
+ endforeach(DIR)
+
+ set(IGNORE_FILES
+ )
+
+ set (COMMON_FILE "src/common.cpp")
+ file (WRITE ${COMMON_FILE} "/ /\n")
+ foreach(FILE ${ALL_SOURCES})
+  list(FIND IGNORE_FILES ${FILE} RESULT)
+    if (RESULT EQUAL -1)
+     file (READ ${FILE} CONTENT)
+     file (APPEND ${COMMON_FILE} "/ ${FILE} /\n")
+     file (APPEND ${COMMON_FILE} "${CONTENT}")
+  endif()
+ endforeach(FILE)
+
+ add_executable (
+  ${PROJECT_NAME}
+  ${APP_TYPE}
+  ${ALL_HEADERS} ${IGNORE_FILES} ${COMMON_FILE} ${RESOURCES_DIR}
+  )
+ set(CMAKE_EXECUTABLE_SUFFIX ".js")
+ set_target_properties (
+     ${PROJECT_NAME} PROPERTIES
+     LINK_FLAGS "-v"
+     )
+
+ # configure properties for gulp
+ configure_file(
+   ${CMAKE_CURRENT_SOURCE_DIR}/targets/Emscripten/gulp-cmake.js.in
+   ${CMAKE_CURRENT_SOURCE_DIR}/targets/Emscripten/gulp-cmake.js
+ )
+endif()

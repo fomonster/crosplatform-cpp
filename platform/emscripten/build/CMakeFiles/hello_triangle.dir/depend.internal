@@ -3,6 +3,14 @@
 
 CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/app.cpp.o
  C:/Sergey/_Cpp/crossplatform-cpp/src/app.cpp
+ C:/Sergey/_Cpp/crossplatform-cpp/src/images.h
+ C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.h
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/images.cpp.o
+ C:/Sergey/_Cpp/crossplatform-cpp/src/images.cpp
+ C:/Sergey/_Cpp/crossplatform-cpp/src/images.h
+CMakeFiles/hello_triangle.dir/C_/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp.o
+ C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.cpp
+ C:/Sergey/_Cpp/crossplatform-cpp/src/lodepng.h
 CMakeFiles/hello_triangle.dir/main.cpp.o
  C:/Sergey/_Cpp/crossplatform-cpp/platform/emscripten/main.cpp
  C:/Sergey/_Cpp/crossplatform-cpp/src/app.h
