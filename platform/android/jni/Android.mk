@@ -20,6 +20,6 @@ LOCAL_MODULE    := libgl2jni
 LOCAL_CFLAGS    := -Werror
 LOCAL_SRC_FILES := main.cpp ../../../src/app.cpp ../../../src/images.cpp ../../../src/lodepng.cpp
 LOCAL_C_INCLUDES := ../../src/
-LOCAL_LDLIBS    := -llog -lGLESv2
+LOCAL_LDLIBS    := -llog -lGLESv2 -lz
 
 include $(BUILD_SHARED_LIBRARY)

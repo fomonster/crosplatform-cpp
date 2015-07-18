@@ -173,6 +173,7 @@ GLuint createProgram(const char* pVertexSource, const char* pFragmentSource) {
 		glLinkProgram(program);
 
 		glBindAttribLocation(gProgram, Position_loc, "vPosition");
+		glBindAttribLocation(gProgram, Texture_loc, "vTexture");
 		glBindAttribLocation(gProgram, Color_loc, "vColor");
 
 		GLint linkStatus = GL_FALSE;
@@ -317,18 +318,33 @@ bool setupGraphics(int w, int h)
 	glEnable(GL_TEXTURE_2D);
 
 
-	//lodepng_load_file("");
+	std::vector<unsigned char> png;
 	std::vector<unsigned char> image;
+
 	unsigned width, height;
-	lodepng::decode(image, width, height, "/sdcard/assets/crate.png");
-	//width = 256;
-	//height = 256;
+	
+	LodePNGState state;
+	lodepng_state_init(&state);
 
-	//GLuint* pixels = (GLuint*)&image[0];// decode_image(width, height));//
-	//textureId = load_texture(width, height, GL_RGBA, decode_image(width, height));
+	char* filename = "/mnt/sdcard/crate.png";
+	
+	lodepng::load_file(png, filename);
+	
+	unsigned res = lodepng::decode(image, width, height, state, png);
+		//lodepng::decode(image, width, height, "/mnt/sdcard/crate.png");
 
-	textureId = load_texture(width, height, GL_RGBA, &image[0]);
-	//free(image);
+	if (res != 0) {
+		
+		width = 256; 
+		height = 256;
+		
+		textureId = load_texture(width, height, GL_RGBA, decode_image(width, height)); 
+	}
+	else 
+	{
+		textureId = load_texture(width, height, GL_RGBA, &image[0]);
+	}
+
 
 
 	glActiveTexture(GL_TEXTURE0);
