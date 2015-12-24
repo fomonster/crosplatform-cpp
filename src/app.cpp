@@ -279,7 +279,7 @@ bool setupGraphics(int w, int h)
 							 "precision mediump float;                      \n"
 							 "uniform sampler2D s_texture;                  \n"	
 							 "varying vec4 v_color;                         \n"
-							 "varying vec2 v_texCoord;                         \n"
+							 "varying vec2 v_texCoord;                        \n"
 							 "void main() {                                 \n"
 							 "  gl_FragColor = v_color * texture2D(s_texture, v_texCoord);  \n"
 							 "}                                             \n");
@@ -327,11 +327,16 @@ bool setupGraphics(int w, int h)
 	lodepng_state_init(&state);
 
 	char* filename = "/mnt/sdcard/crate.png";
+
+
+
+
+
 	
-	lodepng::load_file(png, filename);
+	//lodepng::load_file(png, filename);
+	//lodepng::decode(image, width, height, state, png); 
 	
-	unsigned res = lodepng::decode(image, width, height, state, png);
-		//lodepng::decode(image, width, height, "/mnt/sdcard/crate.png");
+	unsigned res = lodepng::decode(image, width, height, "assets/crate.png");
 
 	if (res != 0) {
 		

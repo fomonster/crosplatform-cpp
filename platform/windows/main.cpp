@@ -80,7 +80,7 @@ void Draw(ESContext *esContext)
 	renderFrame();
 
 	eglSwapBuffers(esContext->eglDisplay, esContext->eglSurface);
-}
+} 
 
 int main(int argc, char *argv[])
 {
